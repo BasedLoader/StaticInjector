@@ -29,7 +29,7 @@ public class StaticInjectorClassVisitor extends ClassVisitor {
 
 	@Override
 	public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
-		Set<String> toAdd = this.tree.getFor(side, name);
+		Set<String> toAdd = this.tree.getFor(this.side, name);
 		if(toAdd.isEmpty()) {
 			super.visit(version, access, name, signature, superName, interfaces);
 		} else {

@@ -13,30 +13,30 @@ public class StaticInjectorWriter implements StaticInjectorVisitor {
 
 	@Override
 	public void visitHeader(String version) throws IOException {
-		writer.write(StaticInjector.STATIC_INJECTOR);
-		writer.write(' ');
-		writer.write(version);
-		writer.write('\n');
+		this.writer.write(StaticInjector.STATIC_INJECTOR);
+		this.writer.write(' ');
+		this.writer.write(version);
+		this.writer.write('\n');
 	}
 
 	@Override
 	public void visitInterfaceExtension(Side side, String targetClass, String interfaceClass) throws IOException {
-		writer.write(side.name().toLowerCase(Locale.ROOT));
-		writer.write(" interface ");
-		writer.write(targetClass);
-		writer.write(' ');
-		writer.write(interfaceClass);
-		writer.write('\n');
+		this.writer.write(side.name().toLowerCase(Locale.ROOT));
+		this.writer.write(" interface ");
+		this.writer.write(targetClass);
+		this.writer.write(' ');
+		this.writer.write(interfaceClass);
+		this.writer.write('\n');
 	}
 
 	@Override
 	public void visitComment(String rawContent, String realContent) throws IOException {
-		writer.write(rawContent);
-		writer.write('\n');
+		this.writer.write(rawContent);
+		this.writer.write('\n');
 	}
 
 	@Override
 	public void visitEmptyLine() throws IOException {
-		writer.write('\n');
+		this.writer.write('\n');
 	}
 }
