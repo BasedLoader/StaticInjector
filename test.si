@@ -1,0 +1,7 @@
+staticInjector    v1
+
+common interface net/minecraft/world/level/block/Block com/maldloader/api/content/block/BlockExtensions
+common interface net/minecraft/world/item/Item com/maldloader/api/content/item/ItemExtensions
+
+common interface net/minecraft/world/item/CreativeModeTab com/maldloader/api/content/item/group/impl/CreativeModeTabExtension
+client interface net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen com/maldloader/api/content/item/group/impl/CreativeModeInventoryScreenExtensions

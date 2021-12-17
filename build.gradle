@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'io.github.mald'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.ow2.asm:asm-commons:9.1'
+}
